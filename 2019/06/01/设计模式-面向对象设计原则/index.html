@@ -1,110 +1,140 @@
-
- <!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-  
-    <title>设计模式-面向对象设计原则 | TalkIsCheaper博客</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="linqing">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yoursite.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yoursite.com">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+    <link rel="dns-prefetch" href="//disqus.com">
+    <link rel="dns-prefetch" href="//shuoit.disqus.com">
+    <link rel="prefetch" href="//disqus.com">
+    <link rel="prefetch" href="//shuoit.disqus.com">
+
+
+<link rel="prerender" href="http://yoursite.com">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="lq">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>设计模式-面向对象设计原则 - TalkIsCheaper博客</title>
+
+<meta name="keywords" content="记博客、看书、涨技术">
+
+<meta name="description " content="记博客、看书、涨技术">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
     
 
     
-    <meta name="description" content="7个常用的面向对象设计模式 1、单一职责原则解释：一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。   一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。 单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。 2、开闭原则解释：软件实体应该对扩展开放，对修改关">
-<meta name="keywords" content="Gof">
-<meta property="og:type" content="article">
-<meta property="og:title" content="设计模式-面向对象设计原则">
-<meta property="og:url" content="http://yoursite.com/2019/06/01/设计模式-面向对象设计原则/index.html">
-<meta property="og:site_name" content="TalkIsCheaper博客">
-<meta property="og:description" content="7个常用的面向对象设计模式 1、单一职责原则解释：一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。   一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。 单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。 2、开闭原则解释：软件实体应该对扩展开放，对修改关">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-01T12:06:41.081Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式-面向对象设计原则">
-<meta name="twitter:description" content="7个常用的面向对象设计模式 1、单一职责原则解释：一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。   一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。 单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。 2、开闭原则解释：软件实体应该对扩展开放，对修改关">
 
-    
-    <link rel="alternative" href="/atom.xml" title="TalkIsCheaper博客" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
 </head>
-</html>
-  <body>
-    <header>
-      
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="TalkIsCheaper博客" title="TalkIsCheaper博客"></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="TalkIsCheaper博客">TalkIsCheaper博客</a></h1>
-				<h2 class="blog-motto"></h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">首页</a></li>
-					
-						<li><a href="/archives">归档</a></li>
-					
-						<li><a href="/tags">标签</a></li>
-					
-						<li><a href="/categories">分类</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</ul></nav>			
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="IT">IT</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
 </div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-  
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2019/06/01/设计模式-面向对象设计原则/" title="设计模式-面向对象设计原则" itemprop="url">设计模式-面向对象设计原则</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linqing" target="_blank" itemprop="author">linqing</a>
-		
-  </p><p class="article-time">
-    <time datetime="2019-06-01T10:55:54.000Z" itemprop="datePublished"> 发表于 2019-06-01</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#7个常用的面向对象设计模式"><span class="toc-number">1.</span> <span class="toc-text">7个常用的面向对象设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单一职责原则"><span class="toc-number">1.1.</span> <span class="toc-text">1、单一职责原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开闭原则"><span class="toc-number">1.2.</span> <span class="toc-text">2、开闭原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、里氏代换原则"><span class="toc-number">1.3.</span> <span class="toc-text">3、里氏代换原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、依赖倒转原则"><span class="toc-number">1.4.</span> <span class="toc-text">4、依赖倒转原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。"><span class="toc-number">1.5.</span> <span class="toc-text">开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、接口隔离原则"><span class="toc-number">1.6.</span> <span class="toc-text">5、接口隔离原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、合成复用原则"><span class="toc-number">1.7.</span> <span class="toc-text">6、合成复用原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、迪米特法则（最少知道原则）"><span class="toc-number">1.8.</span> <span class="toc-text">7、迪米特法则（最少知道原则）</span></a></li></ol></li></ol>
-		
-		</div>
-		
-		<h2 id="7个常用的面向对象设计模式"><a href="#7个常用的面向对象设计模式" class="headerlink" title="7个常用的面向对象设计模式"></a>7个常用的面向对象设计模式</h2><hr>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">搞IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个初入社会的渣渣</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/TalkIsCheaper" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+        
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="读物检索~">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://talkischeaper.github.io/" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://talkischeaper.github.io/" target="_blank">TalkIsCheaper</a>
+                    <span title="最后编辑于&nbsp;2019-06-01">2019-06-01</span>
+                </p>
+                <p>大自然的搬运工</p>
+            </div>
+            <h2 class="post-title">设计模式-面向对象设计原则</h2>
+            <div class="post-meta">
+                本文共计2077个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="7个常用的面向对象设计模式"><a href="#7个常用的面向对象设计模式" class="headerlink" title="7个常用的面向对象设计模式"></a>7个常用的面向对象设计模式</h2><hr>
 <h3 id="1、单一职责原则"><a href="#1、单一职责原则" class="headerlink" title="1、单一职责原则"></a>1、单一职责原则</h3><p>解释：<strong>一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。</strong></p>
 <p>  一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。</p>
 <p>单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。</p>
@@ -139,345 +169,108 @@
 <p>2、每一个类都应当尽量降低其成员变量和成员函数的访问权限</p>
 <p>3、只要有可能，一个类型应当设计成不变类</p>
 <p>4、一个对象对其他对象的引用应当降到最低</p>
-  
-	</div>
-		<footer class="article-footer clearfix">
-<div class="article-catetags">
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Gof/">Gof</a>
-  </div>
-
-</div>
-
-
-
-	<div class="article-share" id="share">
-	
-	  <div data-url="http://yoursite.com/2019/06/01/设计模式-面向对象设计原则/" data-title="设计模式-面向对象设计原则 | TalkIsCheaper博客" data-tsina="5685403402" class="share clearfix">
-	  </div>
-	
-	</div>
-
-
-</footer>
-
-   	       
-	</article>
-	
-	
-
-
-
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#7个常用的面向对象设计模式"><span class="toc-number">1.</span> <span class="toc-text">7个常用的面向对象设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单一职责原则"><span class="toc-number">1.1.</span> <span class="toc-text">1、单一职责原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开闭原则"><span class="toc-number">1.2.</span> <span class="toc-text">2、开闭原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、里氏代换原则"><span class="toc-number">1.3.</span> <span class="toc-text">3、里氏代换原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、依赖倒转原则"><span class="toc-number">1.4.</span> <span class="toc-text">4、依赖倒转原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。"><span class="toc-number">1.5.</span> <span class="toc-text">开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、接口隔离原则"><span class="toc-number">1.6.</span> <span class="toc-text">5、接口隔离原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、合成复用原则"><span class="toc-number">1.7.</span> <span class="toc-text">6、合成复用原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、迪米特法则（最少知道原则）"><span class="toc-number">1.8.</span> <span class="toc-text">7、迪米特法则（最少知道原则）</span></a></li></ol></li></ol>
- 
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-<div class="github-card">
-<p class="asidetitle">Github 名片</p>
-<div class="github-card" data-github="TalkIsCheaper" data-theme="medium"></div>
-<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-</div>
-
-
-
-  
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/Gof/" title="Gof">Gof<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  
-  <div class="archiveslist">
-    <p class="asidetitle"><a href="/archives">归档</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li></ul>
-  </div>
-
-
-  
-  <div class="tagcloudlist">
-    <p class="asidetitle">标签云</p>
-    <div class="tagcloudlist clearfix">
-       <a href="/tags/Gof/" style="font-size: 10px;">Gof</a>
-    </div>
-  </div>
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
-    <iframe width="100%" height="119" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=5685403402&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer">
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Talk is cheap , show me the code . <br>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font">
-		
-		<a href="http://weibo.com/5685403402" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		<a href="https://github.com/TalkIsCheaper" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<a href="mailto:17326122557@163.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-			
-		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
-		
-		<a href="/about" target="_blank" title="linqing">linqing</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-      
-      $('#toc.toc-aside').css('display', 'none');
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
         
-    }
-  });
-});
-</script>
+        <div class="post-tags">标签：
+            
+            <a href="/tags/Gof/">Gof</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  c.click(function(){
-    ta.css('display', 'block').addClass('fadeIn');
-  });
-  o.click(function(){
-    ta.css('display', 'none');
-  });
-  $(window).scroll(function(){
-    ta.css("top",Math.max(140,320-$(this).scrollTop()));
-  });
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<div class="hoverqrcode clearfix"></div>',
-  '<a class="overlay" id="qrcode"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-
-  $('.hoverqrcode').hide();
-
-  var myWidth = 0;
-  function updatehoverqrcode(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-    var qrsize = myWidth > 1024 ? 200:100;
-    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
-    var p = $('.article-share-qrcode').position();
-    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
-                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
-                          .qrcode(options);
-  };
-  $(window).resize(function(){
-    $('.hoverqrcode').hide();
-  });
-  $('.article-share-qrcode').click(function(){
-    updatehoverqrcode();
-    $('.hoverqrcode').toggle();
-  });
-  $('.article-share-qrcode').hover(function(){}, function(){
-      $('.hoverqrcode').hide();
-  });
-});   
-</script>
+    
+    
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            var disqus_config = function () {
+                this.page.url = 'http://yoursite.com/2019/06/01/设计模式-面向对象设计原则/';
+                this.page.identifier = '2019/06/01/设计模式-面向对象设计原则/';
+            };
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, disqus_shortname = 'shuoit', s = d.createElement('script');
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
 
 
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
 
 
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2017-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://talkischeaper.github.io/" target="_blank" rel="friend">TalkIsCheaper</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
 
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-
-
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="请输入查询关键词">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+    $(function () {
+        var jsi_config = {
+            buildingTime: '06/01/2019',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+        SimpleCore.init(jsi_config);
+        
+    });
 </script>
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
-
-  </body>
+</body>
 </html>
