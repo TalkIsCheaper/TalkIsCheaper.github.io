@@ -11,18 +11,18 @@
     
 
     
-    <meta name="description" content="##7个常用的面向对象设计原则##">
+    <meta name="description" content="7个常用的面向对象设计模式 1、单一职责原则解释：一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。   一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。 单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。 2、开闭原则解释：软件实体应该对扩展开放，对修改关">
 <meta name="keywords" content="Gof">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式-面向对象设计原则">
 <meta property="og:url" content="http://yoursite.com/2019/06/01/设计模式-面向对象设计原则/index.html">
 <meta property="og:site_name" content="TalkIsCheaper博客">
-<meta property="og:description" content="##7个常用的面向对象设计原则##">
+<meta property="og:description" content="7个常用的面向对象设计模式 1、单一职责原则解释：一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。   一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。 单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。 2、开闭原则解释：软件实体应该对扩展开放，对修改关">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-01T10:46:26.364Z">
+<meta property="og:updated_time" content="2019-06-01T12:06:41.081Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-面向对象设计原则">
-<meta name="twitter:description" content="##7个常用的面向对象设计原则##">
+<meta name="twitter:description" content="7个常用的面向对象设计模式 1、单一职责原则解释：一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。   一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。 单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。 2、开闭原则解释：软件实体应该对扩展开放，对修改关">
 
     
     <link rel="alternative" href="/atom.xml" title="TalkIsCheaper博客" type="application/atom+xml">
@@ -91,7 +91,7 @@
 		<a href="/about" title="linqing" target="_blank" itemprop="author">linqing</a>
 		
   </p><p class="article-time">
-    <time datetime="2019-06-01T10:44:13.000Z" itemprop="datePublished"> 发表于 2019-06-01</time>
+    <time datetime="2019-06-01T10:55:54.000Z" itemprop="datePublished"> 发表于 2019-06-01</time>
     
   </p>
 </header>
@@ -100,11 +100,45 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#7个常用的面向对象设计模式"><span class="toc-number">1.</span> <span class="toc-text">7个常用的面向对象设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单一职责原则"><span class="toc-number">1.1.</span> <span class="toc-text">1、单一职责原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开闭原则"><span class="toc-number">1.2.</span> <span class="toc-text">2、开闭原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、里氏代换原则"><span class="toc-number">1.3.</span> <span class="toc-text">3、里氏代换原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、依赖倒转原则"><span class="toc-number">1.4.</span> <span class="toc-text">4、依赖倒转原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。"><span class="toc-number">1.5.</span> <span class="toc-text">开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、接口隔离原则"><span class="toc-number">1.6.</span> <span class="toc-text">5、接口隔离原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、合成复用原则"><span class="toc-number">1.7.</span> <span class="toc-text">6、合成复用原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、迪米特法则（最少知道原则）"><span class="toc-number">1.8.</span> <span class="toc-text">7、迪米特法则（最少知道原则）</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>##7个常用的面向对象设计原则##</p>
+		<h2 id="7个常用的面向对象设计模式"><a href="#7个常用的面向对象设计模式" class="headerlink" title="7个常用的面向对象设计模式"></a>7个常用的面向对象设计模式</h2><hr>
+<h3 id="1、单一职责原则"><a href="#1、单一职责原则" class="headerlink" title="1、单一职责原则"></a>1、单一职责原则</h3><p>解释：<strong>一个对象应该只包含单一的职责，并且该职责被完整的封装在一个类中。</strong></p>
+<p>  一个类承担的职责越多，那么它被复用的可能性就越小，且职责过多时，会将过的职责耦合在一起，当一个职责发生变化时，会影响其他职责的运行。</p>
+<p>单一原则是实现高内聚、低耦合的指导方针。所以我们应该尽可能的发现累的不同职责并将它们分离出来。</p>
+<h3 id="2、开闭原则"><a href="#2、开闭原则" class="headerlink" title="2、开闭原则"></a>2、开闭原则</h3><p>解释：<strong>软件实体应该对扩展开放，对修改关闭</strong>。</p>
+<p>指的就是软件实体应该在尽量不修改原有代码的情况下进行扩展。</p>
+<p>为了满足开闭原则，需要对系统进行抽象化设计，抽象化是开闭原则的关键所在。通过定义系统的抽象层，在通过具体类进行扩展。如果需要修改系统的行为，无需对抽象层进行任何改动，只需要增加新的具体类来实现新的业务功能即可。开闭原则是系统是否具有良好的扩展性和灵活性的重要判断依据。</p>
+<h3 id="3、里氏代换原则"><a href="#3、里氏代换原则" class="headerlink" title="3、里氏代换原则"></a>3、里氏代换原则</h3><p>解释：<strong>所有引用基类的地方必须能够透明地使用其子类的对象。</strong></p>
+<p>里氏代换原则表明，在软件中讲一个基类对象替换成它的子类对象，程序不会产生任何错误和异常，反过来则不成立。</p>
+<p>里氏代换原则是实现开闭原则的重要方式之一，由于在使用基类对象的地方，都可以使用子类对象，因此在程序中尽量使用基类类型来对对象进行定义，而在运行时在确定其子类类型，用子类对象替换父类对象。<strong>在运用里氏代换原则时应该将父类设计为抽象类或者接口。</strong></p>
+<h3 id="4、依赖倒转原则"><a href="#4、依赖倒转原则" class="headerlink" title="4、依赖倒转原则"></a>4、依赖倒转原则</h3><p>解释：<strong>高层模块不应该依赖低层模块，它们都应该依赖抽象。抽象不应该依赖于细节，细节应该依赖于抽象。</strong></p>
+<p>简单解释就是：要求<strong>针对接口编程，不要针对实现编程。</strong></p>
+<p>依赖倒转原则要求在传递参数时或者关联关系中尽量引用层次高的抽吸那个类，即使用接口和抽象类进行<strong>变量类型声明</strong>，<strong>参数类型声明</strong>，<strong>方法返回声明</strong>，以及<strong>数据类型转换</strong> ，而<em>不要</em>用具体的类来做这些事。</p>
+<p><strong>为了确保该原则的应用，一个具体类应当只实现接口或者抽象类中声明过的方法，而不要给出多余的方法，否则将无法调用到在子类中增加的新方法</strong></p>
+<h3 id="开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。"><a href="#开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。" class="headerlink" title="开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。"></a>开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。</h3><h3 id="5、接口隔离原则"><a href="#5、接口隔离原则" class="headerlink" title="5、接口隔离原则"></a>5、接口隔离原则</h3><p>解释：<strong>客户端不应该依赖那些它不需要的接口。</strong><br><strong>当一个接口太大时，需要将它分割成一些更小的接口，使用该接口的客户端仅仅需要知道与之相关的方法即可。</strong></p>
+<p>（1）当把“接口”理解成一个类型所提供的所有方法特征的集合时，这是一种逻辑上的概念，接口的划分将直接带来类型的划分，》》》》》》“角色隔离原则”</p>
+<p>（2）把“接口”理解成狭义的特定语言的接口，那么接口隔离原则指的是仅仅提供客户端需要的行为，为客户端提供尽可能小的单独的接口，而不要提供大的接口。接口应当尽量的细化，同时接口中的方法应当尽量的少，每个接口只包含一个客户端（如子模块或者业务逻辑类）所需的方法即可，即是为不同的客户端提供宽窄不同的接口。</p>
+<p>使用接口隔离原则时候需要注意控制接口的粒度，接口不能太小，如果太小会导致系统中接口的泛滥，不利于维护；同时若果接口过大，灵活性较差，使用起来很不方便。一般而言：在接口中仅仅包含为某一类用户定制的方法即可，不应该强迫客户依赖于那些他们不需要的方法。</p>
+<h3 id="6、合成复用原则"><a href="#6、合成复用原则" class="headerlink" title="6、合成复用原则"></a>6、合成复用原则</h3><p>解释：<strong>优先使用对象组合，而不是通过集成来达到复用的目的。</strong></p>
+<p>合成复用原则就是在一个新的对象里通过关联关系（包括组合关系和聚合关系）来使用一些已有的对象，使之成为新对象的一部分，新对象通过委派调用已有的对象的方法达到复用功能的目的。简而言之，在复用时应当尽量使用组合/聚合关系（has - a），少用继承（is - a）。</p>
+<p>通过继承完成复用时，子类会破坏系统的封装性，因为<strong>继承会将基类的实现细节暴露给子类</strong>，相对于子类来说是可见的，这种复用称之为“<strong>白箱复用</strong>”，</p>
+<p>组合/聚合关系是将已有的对象纳入新的对象中，成为新对象的一部分，因此新对象可以调用已有对象的功能，同时成员对象的内部实现对于新对象是不可见的，所以这种复用称之为“<strong>黑箱复用</strong>”。相对于继承而言，耦合度较低，成员对象的变化对于新对象的影响不大，可以在新对象中根据实际需要有选择的调用成员对象的操作。</p>
+<h3 id="7、迪米特法则（最少知道原则）"><a href="#7、迪米特法则（最少知道原则）" class="headerlink" title="7、迪米特法则（最少知道原则）"></a>7、迪米特法则（最少知道原则）</h3><p>解释：<strong>每一个软件单位对于其他单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。</strong></p>
+<p>迪米特法则要求一个软件实体应当尽可能少的与其他实体发生相互作用。当软件中某一个模块发生修改时应当尽量少的影响其他模块。应用<strong>迪米特法则可以降低系统的耦合度，使类与类之间保持松散的耦合关系</strong>。</p>
+<p>在一个对象中，其朋友包含以下几类：</p>
+<p>（1）当前对象本身</p>
+<p>（2）以参数形式传入到当前对象方法中的对象</p>
+<p>（3）当前对象的成员对象</p>
+<p>（4）如果当前对象的成员对象是一个集合，那么集合中的元素也都是朋友</p>
+<p>（5）当前对象所创建的对象</p>
+<p>在运用迪米特法则时注意一下四点：</p>
+<p>1、在类的划分上应当尽量创建松耦合的类，耦合度越低，越利于复用。</p>
+<p>2、每一个类都应当尽量降低其成员变量和成员函数的访问权限</p>
+<p>3、只要有可能，一个类型应当设计成不变类</p>
+<p>4、一个对象对其他对象的引用应当降到最低</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -137,9 +171,9 @@
  
 
 <div class="next">
-<a href="/2019/06/01/hello-world-1/" title="hello world">
+<a href="/2019/06/01/hello-world/" title="Hello World">
  <strong>下一篇：</strong><br> 
- <span>hello world
+ <span>Hello World
 </span>
 </a>
 </div>
@@ -156,7 +190,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#7个常用的面向对象设计模式"><span class="toc-number">1.</span> <span class="toc-text">7个常用的面向对象设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、单一职责原则"><span class="toc-number">1.1.</span> <span class="toc-text">1、单一职责原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、开闭原则"><span class="toc-number">1.2.</span> <span class="toc-text">2、开闭原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、里氏代换原则"><span class="toc-number">1.3.</span> <span class="toc-text">3、里氏代换原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、依赖倒转原则"><span class="toc-number">1.4.</span> <span class="toc-text">4、依赖倒转原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。"><span class="toc-number">1.5.</span> <span class="toc-text">开闭原则是目标、里氏代换原则是基础、依赖倒转原则是手段，三者相辅相成，相互补充，目标一致，只是分析问题时所站的位置不同。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、接口隔离原则"><span class="toc-number">1.6.</span> <span class="toc-text">5、接口隔离原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、合成复用原则"><span class="toc-number">1.7.</span> <span class="toc-text">6、合成复用原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、迪米特法则（最少知道原则）"><span class="toc-number">1.8.</span> <span class="toc-text">7、迪米特法则（最少知道原则）</span></a></li></ol></li></ol>
  
   </div>
 
@@ -181,10 +215,6 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/测试/" title="测试">测试<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Gof/" title="Gof">Gof<sup>1</sup></a></li>
 			
 		
@@ -195,7 +225,7 @@
   
   <div class="archiveslist">
     <p class="asidetitle"><a href="/archives">归档</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">2</span></li></ul>
   </div>
 
 
@@ -203,7 +233,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/Gof/" style="font-size: 10px;">Gof</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a>
+       <a href="/tags/Gof/" style="font-size: 10px;">Gof</a>
     </div>
   </div>
 
