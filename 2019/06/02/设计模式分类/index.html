@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yoursite.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yoursite.com">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yoursite.com">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="lq">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>设计模式分类 - TalkIsCheaper博客</title>
+
+<meta name="keywords" content="记博客、看书、涨技术">
+
+<meta name="description " content="记博客、看书、涨技术">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="IT">IT</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">搞IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个初入社会的渣渣</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/TalkIsCheaper" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+        
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="读物检索~">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://talkischeaper.github.io/" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://talkischeaper.github.io/" target="_blank">TalkIsCheaper</a>
+                    <span title="最后编辑于&nbsp;2019-06-02">2019-06-02</span>
+                </p>
+                <p>大自然的搬运工</p>
+            </div>
+            <h2 class="post-title">设计模式分类</h2>
+            <div class="post-meta">
+                本文共计1971个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式 :"></a>创建型模式 :</h2><p>关注对象创建的过程，描述的是如何将对象的创建和使用分离，让用户在使用对象时无需关心对象的创建细节，从而降低系统的耦合度，让设计更加易于修改和扩展。</p>
+<table>
+<thead>
+<tr>
+<th>模式名称</th>
+<th align="left">定义</th>
+<th>学习难度</th>
+<th>使用频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>简单工厂模式</td>
+<td align="left">定义一个工厂类，他可以根据参数的不同返回不同类的实例，被创建的实例通常都具有相同的父类</td>
+<td>**</td>
+<td>***</td>
+</tr>
+<tr>
+<td>工厂方法模式</td>
+<td align="left">定义一个用于创建对象的接口，但是让子类决定哪一个类实例化。工厂方法模式让一个类的实例化延迟到其子类</td>
+<td>**</td>
+<td>*****</td>
+</tr>
+<tr>
+<td>抽象工厂模式</td>
+<td align="left">提供一个创建一系列相关或相互依赖对象的接口，而无需指定他们具体的类</td>
+<td>****</td>
+<td>*****</td>
+</tr>
+<tr>
+<td>建造者模式</td>
+<td align="left">将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示</td>
+<td>****</td>
+<td>**</td>
+</tr>
+<tr>
+<td>原型模式</td>
+<td align="left">使用原型实例指定待创建对象的类型，并且通过复制这个原型俩创建新的对象</td>
+<td>***</td>
+<td>***</td>
+</tr>
+<tr>
+<td>单例模式</td>
+<td align="left">确保一个类只有一个实例，并提供一个全局访问点来访问这个唯一实例</td>
+<td>*</td>
+<td>****</td>
+</tr>
+</tbody></table>
+<h2 id="结构型模式："><a href="#结构型模式：" class="headerlink" title="结构型模式："></a>结构型模式：</h2><p>关注如何将现有类或对象组织在一起形成更加强大的结构，在Gof中一共包含了7中结构型设计模式。</p>
+<p>在面向对象软件系统中，每个类/对象都承担了一定的职责，它们可以相互协作，实现一些复杂的功能。不同的结构型模式从不同的角度来组合类或对象，它们在尽可能满足各种面系那个对象设计原则的同时为类或对象的组合提供一系列巧妙的解决方案。</p>
+<table>
+<thead>
+<tr>
+<th>模式名称</th>
+<th>定义</th>
+<th>学习难度</th>
+<th>使用频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>适配器模式</td>
+<td>将一个类的接口转换成客户希望的另一个接口，适配器模式让那些接口不兼容的类可以一起工作</td>
+<td>**</td>
+<td>****</td>
+</tr>
+<tr>
+<td>桥接模式</td>
+<td>将抽象部分与它的实现部分解耦，使得两者都能够独立变化</td>
+<td>***</td>
+<td>***</td>
+</tr>
+<tr>
+<td>组合模式</td>
+<td>组合多个对象形成树形结构以表示具有部分-整体关系的层次结构。组合模式让客户端可以统一对待单个对象和组合对象</td>
+<td>***</td>
+<td>****</td>
+</tr>
+<tr>
+<td>装饰模式</td>
+<td>动态的给一个对象增加一些额外的职责。就扩展功能而言，装饰模式提供了一种比子类更加灵活的替代方案</td>
+<td>***</td>
+<td>***</td>
+</tr>
+<tr>
+<td>外观模式</td>
+<td>为子系统中的一组接口提供一个统一的入口。外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用</td>
+<td>*</td>
+<td>*****</td>
+</tr>
+<tr>
+<td>享元模式</td>
+<td>运用共享技术有效地支持大量细粒度对象的复用</td>
+<td>****</td>
+<td>*</td>
+</tr>
+<tr>
+<td>代理模式</td>
+<td>给某一个对象提供一个代理或占位符，并由代理对象来控制原对象的访问</td>
+<td>***</td>
+<td>****</td>
+</tr>
+</tbody></table>
+<h2 id="行为模式："><a href="#行为模式：" class="headerlink" title="行为模式："></a>行为模式：</h2><p>行为模式关注系统对象之间的交互，研究系统在运行时对象之间的相互通信与协作，进一步明确对象的职责。共有11中。</p>
+<p>在软件系统运行时对象并不是孤立存在的，它们可以通过相互的通信协作完成某些功能，一个对象在运行时也将影响其他对象的运行。行为模式不仅仅关注类和对象本身，还重点关注它们之间的相互作用和职责划分。</p>
+<table>
+<thead>
+<tr>
+<th>模式名称</th>
+<th>定义</th>
+<th>学习难度</th>
+<th>使用频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>职责链模式</td>
+<td>避免一个请求的发送者与接受者耦合在一起，让多个对象都有机会处理请求。将接受请求的对象连接成一条链，并且沿着这条链传递请求，知道有一个对象能够处理它为止</td>
+<td>***</td>
+<td>**</td>
+</tr>
+<tr>
+<td>命令模式</td>
+<td>将一个请求封装成一个对象，从而可以用不同的请求对客户进行参数化，对请求排队或者记录请求日志，以及支持可撤销操作</td>
+<td>***</td>
+<td>****</td>
+</tr>
+<tr>
+<td>解释器模式</td>
+<td>给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子</td>
+<td>*****</td>
+<td>*</td>
+</tr>
+<tr>
+<td>迭代器模式</td>
+<td>提供一种方法顺序访问一个聚合对象中的各个元素，而又不用暴露该对象的内部表示</td>
+<td>***</td>
+<td>*****</td>
+</tr>
+<tr>
+<td>中介者模式</td>
+<td>定义一个对象来封装一系列对象的交互。中介者模式使得各个对象之间不需要显示的相互引用，从而使其耦合松散，而且可以独立地改变它们之间的交互</td>
+<td>***</td>
+<td>**</td>
+</tr>
+<tr>
+<td>备忘录模式</td>
+<td>在不破坏封装的前提下捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存的状态</td>
+<td>**</td>
+<td>**</td>
+</tr>
+<tr>
+<td>观察者模式</td>
+<td>定义对象之间的一种一对多依赖关系，使得每当一个对象状态发生改变时其相关依赖对象皆得到通知并被自动更新</td>
+<td>***</td>
+<td>*****</td>
+</tr>
+<tr>
+<td>状态模式</td>
+<td>允许一个对象在其内部状态改变时改变它的行为。对象看起来似乎修改了它的类</td>
+<td>***</td>
+<td>***</td>
+</tr>
+<tr>
+<td>策略模式</td>
+<td>定义一系列算法，将每一个算法封装起来，并让它们可以相互替换，策略模式让算法可以独立于使用它的客户端而变化</td>
+<td>*</td>
+<td>****</td>
+</tr>
+<tr>
+<td>模板方法模式</td>
+<td>定义一个操作中算法的框架，而将一些步骤延迟到子类中。模板方法模式使得子类可以不改变一个算法的结构即可以冲定义该算法的某些特定步骤</td>
+<td>**</td>
+<td>***</td>
+</tr>
+<tr>
+<td>访问者模式</td>
+<td>表示一个作用于某对象结构中的各个元素的操作。访问者模式让用户可以在不改变各元素的类的前提下定义作用于这些元素的新操作</td>
+<td>****</td>
+<td>*</td>
+</tr>
+</tbody></table>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/gof/">gof</a>
+            
+        </div>
+        
+    </article>
+    
+    
+
+    
+    
+
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2017-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://talkischeaper.github.io/" target="_blank" rel="friend">TalkIsCheaper</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="请输入查询关键词">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '06/01/2019',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>
